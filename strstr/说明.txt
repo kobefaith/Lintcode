@@ -1,0 +1,15 @@
+字符串查找 
+
+字符串查找（又称查找子字符串），是字符串操作中一个很有用的函数。你的任务是实现这个函数。
+
+对于一个给定的source字符串和一个target字符串，你应该在source字符串中找出target字符串出现的第一个位置(从0开始)。
+
+如果不存在，则返回 -1。
+
+样例
+如果source="source"和target="target"，返回 -1
+
+如果source="abcdabcdefg"和target="bcd"，返回 1
+
+挑战
+O(n)时间复杂度
