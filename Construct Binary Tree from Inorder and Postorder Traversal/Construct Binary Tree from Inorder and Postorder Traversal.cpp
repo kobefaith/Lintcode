@@ -29,19 +29,12 @@ public:
                 break;
             }
         }
-        TreeNode *root = new TreeNode(inorder[r_index]);
-        if (r_index - ibeg > 0){
-            left = ConstructBinaryTree(inorder,postorder,ibeg,r_index - ibeg,pbeg);
-        }else{
-            left = NULL;
-        }
-        if (ibeg+ilen-1 - r_index > 0){
-            right = ConstructBinaryTree(inorder,postorder,r_index+1,ibeg+ilen-1 - r_index,pbeg+r_index-ibeg);
-        }else{
-            right = NULL;
-        }
+        TreeNode *root = new TreeNode(inorder[r_index]);        
+        left = ConstructBinaryTree(inorder,postorder,ibeg,r_index - ibeg,pbeg);        
+        right = ConstructBinaryTree(inorder,postorder,r_index+1,ibeg+ilen-1 - r_index,pbeg+r_index-ibeg);       
         root->left = left;
         root->right = right;
+		
         return root;
     }
 };
